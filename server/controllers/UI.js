@@ -1,0 +1,1 @@
+export const getSimulationPage = (req, res) => res.render('simulation', {});
