@@ -1,0 +1,4 @@
+name,max_speed,color
+prey1,10.0,blue,
+prey2,9.0,green,
+predator,12.0,red

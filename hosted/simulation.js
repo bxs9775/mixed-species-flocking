@@ -18,25 +18,25 @@ let init_pops = {
 
 
 // define interactions
-species["prey1"].addStearingIx("flee",120,2,["predator"]);
-species["prey1"].addStearingIx("cohesion",60,0.5,["prey1","prey2"]);
-species["prey1"].addStearingIx("seperate",10,0.5,["prey1","prey2"]);
-species["prey1"].addStearingIx("alignment",25,1,["prey1","prey2"]);
+species["prey1"].addSteeringIx("flee",120,2,["predator"]);
+species["prey1"].addSteeringIx("cohesion",60,0.5,["prey1","prey2"]);
+species["prey1"].addSteeringIx("seperate",10,0.5,["prey1","prey2"]);
+species["prey1"].addSteeringIx("alignment",25,1,["prey1","prey2"]);
 species["prey1"].addLatkaVolterraIx("birth",30,0.07,["prey1","prey2"]);
 species["prey1"].addLatkaVolterraIx("death",0,0.05,[]);
 
-species["prey2"].addStearingIx("flee",150,2,["predator"]);
-species["prey2"].addStearingIx("cohesion",60,0.5,["prey1","prey2"]);
-species["prey2"].addStearingIx("seperate",10,0.5,["prey1","prey2"]);
-species["prey2"].addStearingIx("alignment",25,1,["prey1","prey2"]);
+species["prey2"].addSteeringIx("flee",150,2,["predator"]);
+species["prey2"].addSteeringIx("cohesion",60,0.5,["prey1","prey2"]);
+species["prey2"].addSteeringIx("seperate",10,0.5,["prey1","prey2"]);
+species["prey2"].addSteeringIx("alignment",25,1,["prey1","prey2"]);
 species["prey2"].addLatkaVolterraIx("birth",30,0.07,["prey2"]);
 species["prey2"].addLatkaVolterraIx("death",0,0.05,[]);
 
 
-species["predator"].addStearingIx("seek",120,2,["prey1","prey2"]);
-species["predator"].addStearingIx("cohesion",60,0.5,["predator"]);
-species["predator"].addStearingIx("seperate",10,0.5,["predator"]);
-species["predator"].addStearingIx("alignment",25,1,["predator"]);
+species["predator"].addSteeringIx("seek",120,2,["prey1","prey2"]);
+species["predator"].addSteeringIx("cohesion",60,0.5,["predator"]);
+species["predator"].addSteeringIx("seperate",10,0.5,["predator"]);
+species["predator"].addSteeringIx("alignment",25,1,["predator"]);
 species["predator"].addLatkaVolterraIx("eat",30,0.2,["prey1","prey2"]);
 species["predator"].addLatkaVolterraIx("death",0,0.05,[]);
 
@@ -61,7 +61,6 @@ async function runSimulation(iterations){
 };
 
 function startSimulation(){
-    console.log("running onload");
     let canvas = document.getElementById("simulation_world");
     display = new CanvasDisplay(canvas);
 

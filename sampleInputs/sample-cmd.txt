@@ -1,0 +1,1 @@
+node .\server\batchedRun.js --species ".\sampleInput\species.csv" --init_pops ".\sampleInput\populations.csv" --interactions ".\sampleInput\interactions.csv" --outputDir test1 --runs 100
