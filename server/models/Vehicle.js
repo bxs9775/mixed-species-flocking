@@ -275,6 +275,9 @@ export default class Vehicle{
             // increase the count for this vehicle's species by 1
             this.world.counts[this.species]++;
         }
+        if(this.steeringForce == null){
+            return;
+        }
         // Calculate the acceleration. F=ma -> a=F/a
         let mass_factor = 1/this.mass
         let acceleration = multiply(this.steeringForce,mass_factor);

@@ -49,6 +49,9 @@ function draw(data){
 };
 
 async function runSimulation(iterations){
+    if(iterations < 0){
+        iterations = Number.MAX_SAFE_INTEGER;
+    }
     for(let i = 0; i < iterations; i++){
         let data = (await axios.post("http://localhost:3000/api/simulation/runStep",{})).data;
         draw(data);
@@ -73,7 +76,7 @@ function startSimulation(){
     }).then((res) => {
         let data = res.data;
         draw(data);
-        runSimulation(100);
+        runSimulation(-1);
     });
 };
 
